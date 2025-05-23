@@ -17,7 +17,7 @@ function App() {
       bio: "Aspiring to become a proficient full-stack developer, my primary goal is to cultivate substantial expertise in the dynamic field of web development. I envision kickstarting this journey by securing a position in a reputable product-based company, where I can immerse myself in hands-on experiences and cutting-edge projects. With a commitment to continuous improvement, my long-term objective involves advancing to higher roles within the organization, contributing significantly to its growth and innovation. I am specialized in front-end development, focusing on creating, engaging, and intuitive user interfaces. This specialization serves as a foundation for my broader aspirations in the full-stack realm, where I aim to master both front-end and back-end technologies. Currently, I'm seeking internship opportunities to enhance my skills further and contribute to exciting projects.",
       profileImage: "pro.jpg"
     },
-    resume: {
+    education: {
       education: [
         { qualification: "B.Tech (AI&DS)", institution: "Anna University Regional Campus", year: 2026, percentage: "Pursuing" },
         { qualification: "12th", institution: "Kalaimagal Kalalaya Matric Higher Secondary School", year: 2022, percentage: "89%" },
@@ -91,8 +91,8 @@ function App() {
         </section>
       )}
 
-      {activeSection === 'resume' && (
-        <section className="resume">
+      {activeSection === 'education' && (
+        <section className="education">
           <h2>Education</h2>
           <table>
             <thead>
@@ -104,7 +104,7 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              {portfolio.resume.education.map((edu, i) => (
+              {portfolio.education.education.map((edu, i) => (
                 <tr key={i}>
                   <td>{edu.qualification}</td>
                   <td>{edu.institution}</td>
@@ -117,7 +117,7 @@ function App() {
 
           <h2>Skills</h2>
           <div className="skills">
-            {portfolio.resume.skills.map((skill, i) => (
+            {portfolio.education.skills.map((skill, i) => (
               <div key={i} className="skill">
                 <img src={skill.logo} alt={skill.name} />
                 <p>{skill.name}</p>
